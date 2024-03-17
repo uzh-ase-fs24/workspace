@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   localstack:
-    container_name: "findme-localstack"
+    container_name: "localstack-main"
     image: localstack/localstack
     ports:
       - "4566:4566"
@@ -27,7 +27,7 @@ services:
     build:
       context: ./frontend
     environment:
-      - API_URL=http://findme.execute-api.${self:services.localstack.container_name}.localstack.cloud:4566
+      - API_URL=http://findme.execute-api.localstack-main.localstack.cloud:4566
     depends_on:
       - serverless
     ports:
