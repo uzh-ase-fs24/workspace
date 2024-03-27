@@ -4,7 +4,7 @@
     <option name="links">
       <list>
         <IssueNavigationLink>
-          <option name="issueRegexp" value="(frontend|backend|workspace)#(\d*)" />
+          <option name="issueRegexp" value="(frontend|backend|workspace|shared) ?#(\d*)" />
           <option name="linkRegexp" value="https://github.com/uzh-ase-fs24/$1/issues/$2" />
         </IssueNavigationLink>
       </list>
@@ -14,6 +14,7 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/backend" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/frontend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/shared" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/workspace.wiki" vcs="" />
   </component>
 </project>

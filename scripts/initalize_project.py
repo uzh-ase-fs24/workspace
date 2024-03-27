@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-REPOSITORIES = ["frontend", "backend", "workspace.wiki"]
+REPOSITORIES = ["frontend", "backend", "workspace.wiki", "shared"]
 ORGANIZATION = "uzh-ase-fs24"
 
 

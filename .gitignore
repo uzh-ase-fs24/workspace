@@ -5,6 +5,7 @@
 backend/
 frontend/
 workspace.wiki/
+shared/
 
 volume/
 

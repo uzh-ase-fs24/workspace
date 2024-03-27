@@ -8,15 +8,21 @@ def main():
         commit_message = file.read()
 
     # Define the pattern
-    pattern = r"(uzh-ase-fs24\/)?(frontend|backend|workspace)#\d*:"
+    same_repo_pattern = r"(frontend|backend|workspace|shared) #\d*:"
+    different_repo_pattern = r"(uzh-ase-fs24\/)(frontend|backend|workspace|shared)#\d*:"
 
     # Check if the commit message matches the pattern
-    if not re.match(pattern, commit_message):
+    if not re.match(same_repo_pattern, commit_message) and not re.match(
+        different_repo_pattern, commit_message
+    ):
         print("ERROR: Commit message does not match the required format.")
         print("Examples:")
         print("uzh-ase-fs24/workspace#27: small fix")
-        print("frontend#21: fixing bug")
-        print(pattern, commit_message)
+        print(different_repo_pattern)
+        print("or")
+        print("frontend #21: fixing bug")
+        print(same_repo_pattern)
+        print(commit_message)
         sys.exit(1)
 
 
